@@ -70,3 +70,17 @@ Obtener el listado de todas las ventas ordenadas por monto de mayor a menor, asi
 
 # CTE
 Obtener un reporte con el total acumulado de ventas y el promedio por transacción de cada vendedor durante todo el período registrado. A través de una CTE, calcular estas métricas y luego filtrar en la consulta principal únicamente a los vendedores cuya venta promedio por transacción sea superior a $200.00, ordenando los resultados de mayor a menor según el monto total vendido.
+
+
+
+
+## REVIEW DIA 4
+
+Review:
+Crear una vista llamada vw_ventas_destacadas que contenga únicamente los registros de ventas cuyo monto sea igual o superior a $300.00, incluyendo la fecha, el vendedor y el monto.
+
+Crear una vista llamada vw_resumen_vendedores que muestre el nombre de cada vendedor, el número total de transacciones realizadas y el precio promedio de sus ventas redondeado a dos decimales.
+
+Crear un procedimiento llamado sp_ajustar_precios_bajo_stock que aplique un incremento porcentual al precio de todos los productos cuyo stock sea menor a cierto límite recibido por parámetro (por ejemplo, aumentar un 10% el precio a productos con menos de 15 unidades en existencia).
+
+Crear una función llamada fn_aplicar_descuento_producto que reciba el id del producto y un porcentaje de descuento (por ejemplo, 15.00 para 15%). La función debe calcular el precio final restando el descuento al precio original.

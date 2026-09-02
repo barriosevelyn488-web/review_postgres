@@ -1,0 +1,22 @@
+DROP TABLE IF EXISTS ventas CASCADE;
+DROP TABLE IF EXISTS productos CASCADE;
+DROP TABLE IF EXISTS vendedores CASCADE;
+
+CREATE TABLE vendedores (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE productos (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    precio NUMERIC(10, 2) NOT NULL,
+    stock INT NOT NULL
+);
+
+CREATE TABLE ventas (
+    id SERIAL PRIMARY KEY,
+    monto NUMERIC(10, 2) NOT NULL,
+    fecha DATE NOT NULL,
+    vendedor_id INT NOT NULL REFERENCES vendedores(id) ON DELETE CASCADE
+);
