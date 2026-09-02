@@ -55,3 +55,17 @@ ORDER BY analisis_perfil DESC;
 
 
 --Calcular la altura máxima y mínima registrada entre los estudiantes hombres.
+SELECT 
+    MAX(altura) AS altura_maxima,
+    MIN(altura) AS altura_minima
+FROM estudiantes
+WHERE genero = 'M';
+
+
+
+--Mostrar el nombre, fecha e hora exacta de registro de los estudiantes que ingresaron antes de las 09:00:00 AM.
+
+SELECT nombre, fecha_hora_registro
+FROM estudiantes
+WHERE CAST(fecha_hora_registro AS TIME) < '09:00:00'
+ORDER BY fecha_hora_duración DESC;

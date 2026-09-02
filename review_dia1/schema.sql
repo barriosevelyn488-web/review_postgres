@@ -13,7 +13,3 @@ CREATE TABLE estudiantes (
     activo BOOLEAN DEFAULT TRUE
 );
 
-
---Obtener el nombre, edad y promedio de todos los estudiantes que se encuentren activos.
-
-SELECT 
