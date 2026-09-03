@@ -1,3 +1,5 @@
+CREATE DATABASE libreria;
+
 CREATE TABLE autores (
     autor_id SERIAL PRIMARY KEY,
     nombre VARCHAR(30) NOT NULL,
